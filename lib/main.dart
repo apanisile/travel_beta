@@ -12,17 +12,14 @@ void main() => runApp(MyApp());
 class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      routes: {
-        '/': (context) => HomePage(),
-        '/details': (context) => RomePage(),
-        '/details/greece': (context) => GreecePage(),
-        '/details/maldives': (context) => MaldivesPage(),
-        '/details/paris': (context) => ParisPage(),
-        '/details/spain': (context) => SpainPage(),
-      }
-    );
+    return MaterialApp(debugShowCheckedModeBanner: false, routes: {
+      '/': (context) => HomePage(),
+      '/details': (context) => RomePage(),
+      '/details/greece': (context) => GreecePage(),
+      '/details/maldives': (context) => MaldivesPage(),
+      '/details/paris': (context) => ParisPage(),
+      '/details/spain': (context) => SpainPage(),
+    });
   }
 }
 
@@ -88,5 +85,3 @@ class HomePage extends StatelessWidget {
     );
   }
 }
-
-
