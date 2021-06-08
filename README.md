@@ -1,16 +1,12 @@
-# test
+# Travel Beta
 
-A new Flutter project.
+First Tourism Mobile Application
 
-## Getting Started
+## About
 
-This project is a starting point for a Flutter application.
+This project is monile application built using Dart.
 
-A few resources to get you started if this is your first Flutter project:
+It is meant to be an app that eases the stress of individually searching for locations to go on holidays.
 
-- [Lab: Write your first Flutter app](https://flutter.dev/docs/get-started/codelab)
-- [Cookbook: Useful Flutter samples](https://flutter.dev/docs/cookbook)
+For now, Travel Beta uses just 6 images with an onTap action, WHen the images are tapped, a new page with information and facts aabout the images pops up.
 
-For help getting started with Flutter, view our
-[online documentation](https://flutter.dev/docs), which offers tutorials,
-samples, guidance on mobile development, and a full API reference.
