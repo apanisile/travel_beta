@@ -1,11 +1,15 @@
 import 'package:flutter/material.dart';
 import 'package:test/pages/image_banner.dart';
+import 'package:test/pages/maldivesPage.dart';
+import 'package:test/pages/parisPage.dart';
+import 'package:test/pages/spain.dart';
 import 'pages/romePage.dart';
 import 'pages/widgets/scaffold.dart';
+import 'pages/greecePage.dart';
 
-void main() => runApp(App0806());
+void main() => runApp(MyApp());
 
-class App0806 extends StatelessWidget {
+class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
@@ -13,9 +17,11 @@ class App0806 extends StatelessWidget {
       routes: {
         '/': (context) => HomePage(),
         '/details': (context) => RomePage(),
-        '/details/cast': (context) => CastPage(),
-        '/details/reviews': (context) => ReviewsPage(),
-      },
+        '/details/greece': (context) => GreecePage(),
+        '/details/maldives': (context) => MaldivesPage(),
+        '/details/paris': (context) => ParisPage(),
+        '/details/spain': (context) => SpainPage(),
+      }
     );
   }
 }
@@ -37,64 +43,43 @@ class HomePage extends StatelessWidget {
               SizedBox(
                 height: 2.0,
               ),
-             ImageBanner(imagePath: 'places/maldives.jpg', pagePath: '/details',),
-              SizedBox(
-                height: 2.0,
-              ),
-              Container(
-                child: GestureDetector(
-                  //build a page for paris
-                  onTap: () => Navigator.pushNamed(context, '/details'),
-                  child: SizedBox(
-                    child: Image.asset(
-                      'places/paris.jpeg',
-                      fit: BoxFit.fitWidth,
-                    ),
-                  ),
-                ),
+              ImageBanner(
+                imagePath: 'places/maldives.jpg',
+                pagePath: '/details/maldives',
               ),
               SizedBox(
                 height: 2.0,
               ),
-              Container(
-                child: GestureDetector(
-                  //build a page for sey
-                  onTap: () => Navigator.pushNamed(context, '/details'),
-                  child: SizedBox(
-                    child: Image.asset(
-                      'places/sey.jpg',
-                      fit: BoxFit.fitWidth,
-                    ),
-                  ),
-                ),
+              //paris
+              ImageBanner(
+                imagePath: 'places/paris.jpeg',
+                pagePath: '/details/paris',
+              ),
+
+              SizedBox(
+                height: 2.0,
+              ),
+              //seychelles
+              ImageBanner(
+                imagePath: 'places/sey.jpg',
+                pagePath: '/details/sey',
               ),
               SizedBox(
                 height: 2.0,
               ),
-              Container(
-                child: GestureDetector(
-                  onTap: () => Navigator.pushNamed(context, '/details'),
-                  child: SizedBox(
-                    child: Image.asset(
-                      'places/spain.jpeg',
-                      fit: BoxFit.fitWidth,
-                    ),
-                  ),
-                ),
+              //spain
+              ImageBanner(
+                imagePath: 'places/spain.jpeg',
+                pagePath: '/details/spain',
               ),
+
               SizedBox(
                 height: 2.0,
               ),
-              Container(
-                child: GestureDetector(
-                  onTap: () => Navigator.pushNamed(context, '/details'),
-                  child: SizedBox(
-                    child: Image.asset(
-                      'places/greece.jpg',
-                      fit: BoxFit.fitWidth,
-                    ),
-                  ),
-                ),
+              //greece
+              ImageBanner(
+                imagePath: 'places/greece.jpg',
+                pagePath: '/details/greece',
               ),
             ],
           ),
@@ -104,22 +89,4 @@ class HomePage extends StatelessWidget {
   }
 }
 
-class CastPage extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return buildEasyScaffold(
-      appBarTitle: 'Cast Page',
-      body: Container(),
-    );
-  }
-}
 
-class ReviewsPage extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return buildEasyScaffold(
-      appBarTitle: 'Reviews Page',
-      body: Container(),
-    );
-  }
-}

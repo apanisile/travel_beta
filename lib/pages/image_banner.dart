@@ -15,6 +15,7 @@ class ImageBanner extends StatelessWidget {
         child: GestureDetector(
           //build a page for maldives
           onTap: () => Navigator.pushNamed(context, pagePath),
+
           child: SizedBox(
             child: Image.asset(
               imagePath,
