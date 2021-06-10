@@ -18,7 +18,7 @@ class TextSection extends StatelessWidget {
       children: [
         Container(
             padding: EdgeInsets.fromLTRB(hPad, 32.0, hPad, 4.0),
-            child: Text(title, style: Theme.of(context).textTheme.headline2,)),
+            child: Text(title, style: Theme.of(context).textTheme.headline4,)),
         Container(
             padding: EdgeInsets.fromLTRB(hPad, 10.0, hPad, hPad),
             child: Text(body, style: Theme.of(context).textTheme.bodyText1,)),

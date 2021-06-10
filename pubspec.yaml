@@ -48,12 +48,14 @@ flutter:
 
   # To add assets to your application, add an assets section, like this:
   assets:
-     - places/rome.jpg
-     - places/paris.jpeg
-     - places/maldives.jpg
-     - places/spain.jpeg
-     - places/sey.jpg
-     - places/greece.jpg
+     - assets/images/rome.jpg
+     - assets/images/paris.jpeg
+     - assets/images/maldives.jpg
+     - assets/images/spain.jpeg
+     - assets/images/sey.jpg
+     - assets/images/greece.jpg
+     - assets/images/rome/1.jpeg
+     - assets/images/rome/2.jpg
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware.

@@ -6,6 +6,7 @@ import 'text_section.dart';
 import 'widgets/scaffold.dart';
 
 class RomePage extends StatelessWidget {
+
   @override
   Widget build(BuildContext context) {
     return buildEasyScaffold(
@@ -13,26 +14,23 @@ class RomePage extends StatelessWidget {
       body: ListView(
         children: [
           Container(
-
             child: Center(
-
               child: SizedBox(
                 height: 300,
                 width: 500,
                 child: Carousel(
                   images: [
-                    ExactAssetImage("places/rome.jpg"),
-                    ExactAssetImage("places/greece.jpg"),
-                    ExactAssetImage("places/maldives.jpg"),
+                    ExactAssetImage("assets/images/rome.jpg"),
+                    ExactAssetImage("assets/images/rome/1.jpeg"),
+                    ExactAssetImage("assets/images/rome/2.jpg"),
                   ],
-                  autoplay: false,
+                  autoplay: true,
                   animationDuration: Duration(milliseconds: 1000),
                   dotSize: 6.0,
                   dotSpacing: 15.0,
                   dotColor: Colors.lightGreenAccent,
                   //borderRadius: true,
                   boxFit: BoxFit.cover,
-
                 ),
               ),
             ),
